@@ -15,7 +15,7 @@ while ($s1=next($input)) {
   if (isset($s1[3]))
     $times = $times*10 + (int)$s1[3];
   if ($pos == 0 and $s2 == 'L') $tot--;
-  $pos = $pos + ($s1[0] == 'L' ? -$times : $times);
+  $pos += ($s2 == 'L' ? -$times : $times);
   while ($pos < 0) {
     $pos += 100;
     $tot++;
